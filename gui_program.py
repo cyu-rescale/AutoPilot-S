@@ -297,7 +297,7 @@ class GUIProgram(QMainWindow):
     def java_combo_clicked(self):
         current_text = self.java_combo_box.currentText()
         for i in range(self.java_list_widget.count()):
-            if current_text in self.java_list_widget.item(i).text():
+            if current_text == self.java_list_widget.item(i).text().split('\\')[-1]:
                 self.java_list_widget.item(i).setSelected(True)
             else:
                 self.java_list_widget.item(i).setSelected(False)
